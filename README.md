@@ -19,16 +19,13 @@
 <br />
 <div align="center">
 
-<img src="https://github.com/user-attachments/assets/5b5d3eb0-0b83-4317-9a11-6ee2bc4a3784" width="100" height="100">
+<img src="https://github.com/user-attachments/assets/7493b614-f037-4ec1-a0d1-52557823d5dc" width="100" height="100">
 
-  
 
-  <h3 align="center">Spotify-Util</h3>
+  <h3 align="center">TrackMyFitness</h3>
 
   <p align="center">
-    A utility tool for enhancing Spotify experiences by providing advanced playlist management, detailed data visualizations, and seamless playlist creation.
-    
-  <a href="https://spotify-util.onrender.com/">View Demo » (currently only allowing authorized users full website functionality)</a>
+    TrackMyFitness is a tool designed to optimize workout progress tracking, offering personalized workout templates, detailed performance analytics, and seamless workout logging to help users stay on top of their fitness goals.
     .
   </p>
 </div>
@@ -65,20 +62,22 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-![p1](https://github.com/user-attachments/assets/bda599db-97a7-4d00-b6e1-cba9d9b9e404)
+![p1](https://github.com/user-attachments/assets/7d4537e1-1014-4462-a603-150382694874)
 
-**Spotify-Util** is a full-stack web application designed to enhance your Spotify experience by providing advanced playlist management and analysis features. Built with Node.js, Express, MongoDB, and React, this application leverages Spotify's OAuth2 for authentication and API access.
+**TrackMyFitness** is a full-stack web application designed to enhance your workout tracking experience by providing tools for workout creation, analysis, and template-based planning. Built with Node.js, Express, PostgreSQL, and React, this application leverages Supabase for authentication and data retrieval.
 
 ### Key Features
 
-- **Spotify OAuth2 Integration**: Securely sign in with Spotify and manage your access tokens and playlists.
-- **Track List Management**: View and sort your playlists in a tabular format, filter tracks by various attributes, and stage songs for further use.
-- **Data Visualization**: Gain insights into your playlists with visualizations including genre breakdowns, top artists, release year graphs, and detailed attribute displays such as Danceability, Energy, and Popularity.
-- **Playlist Creation**: Use the staged songs to create new playlists directly on Spotify, streamlining your music organization process.
+- **Supabase Integration**: Securely sign in and manage your workout data with user-specific templates and workout history.
+- **Workout Creation**: Easily create customized workouts, specifying exercises, sets, reps, and weights.
+- **Template Management**: Use premade workout templates for quick setup, saving time and effort.
+- **Data Visualization**: Analyze your workout progress with visualizations such as charts and tables, tracking metrics like weight lifted, reps, and overall strength development.
+- **Workout Analysis**: Gain insights into your long-term progress with tools that break down your workout data for better decision-making and performance tracking.
 
 ### Purpose
 
-Spotify-Util was developed to provide a more robust tool for analyzing, organizing, and creating playlists. By extending the capabilities of Spotify's built-in features, the application aims to give users a deeper understanding of their music and more control over their playlist creation.
+TrackMyFitness was developed to be a convenient tool for tracking workout progress, analyzing long-term strength trends, and simplifying workout planning through reusable templates. By extending the basic functionality of fitness tracking, the application aims to provide users with meaningful insights into their fitness journey.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -86,12 +85,11 @@ Spotify-Util was developed to provide a more robust tool for analyzing, organizi
 
 ### Built With
 
-
-
 * <a href="https://nodejs.org/" target="_blank"><img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white" alt="Node.js" width="150" height="40"/></a>
 * <a href="https://expressjs.com/" target="_blank"><img src="https://img.shields.io/badge/Express.js-%23404d59?style=flat&logo=express&logoColor=%2361DAFB" alt="Express" width="150" height="40"/></a>
-* <a href="https://www.mongodb.com/" target="_blank"><img src="https://img.shields.io/badge/MongoDB-%2347A248?style=flat&logo=mongodb&logoColor=white" alt="MongoDB" width="150" height="40"/></a>
+* <a href="https://www.postgresql.org/" target="_blank"><img src="https://img.shields.io/badge/PostgreSQL-%23336791?style=flat&logo=postgresql&logoColor=white" alt="PostgreSQL" width="150" height="40"/></a>
 * <a href="https://reactjs.org/" target="_blank"><img src="https://img.shields.io/badge/React-%23282c34?style=flat&logo=react&logoColor=%61DAFB" alt="React" width="150" height="40"/></a>
+* <a href="https://supabase.com/" target="_blank"><img src="https://img.shields.io/badge/Supabase-%233FCF8E?style=flat&logo=supabase&logoColor=white" alt="Supabase" width="150" height="40"/></a>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -115,18 +113,13 @@ To get a local copy up and running follow these steps.
 1. Create an account then get a Client ID & Client Secret at https://developer.spotify.com/dashboard
 2. Clone the repo
    ```sh
-   git clone https://github.com/ReedGoldsworthy/spotify_util.git
+   git clone https://github.com/ReedGoldsworthy/lifting-tracker-backend.git
    ```
 3. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your Client ID & Client Secret in `config.js`
-   ```js
-   const CLIENT_ID = 'ENTER YOUR CLIENT ID';
-   const CLIENT_SECRET = 'ENTER YOUR CLIENT SECRET';
-   ```
-5. Change git remote url to avoid accidental pushes to base project
+4. Change git remote url to avoid accidental pushes to base project
    ```sh
    git remote set-url origin github_username/repo_name
    git remote -v # confirm the changes
@@ -141,24 +134,36 @@ To get a local copy up and running follow these steps.
 
 ### Demo Video:
 
-### Track List
-- The Track List page allows users to view and manage their playlist tracks in a sortable and filterable table format. Users can sort tracks by various attributes, apply filters to find specific songs, and stage playlists for further use, providing an organized and efficient way to interact with their music collection.
+### Create Workout
+- The Create page allows users to build new workouts from scratch or use premade templates. It provides an intuitive interface for selecting exercises, specifying sets, reps, and weights, making it easy to organize and customize workouts based on individual goals and preferences.
 <p></p>
 
-![stage1](https://github.com/user-attachments/assets/04a0dfe2-3ff1-4060-a643-9260296f7774)
+![create](https://github.com/user-attachments/assets/6c56c590-ddb1-478b-901d-87ab3a471d1d)
+
+
+### Templates
+- The Templates page allows users to quickly create workouts using premade templates. These templates can include pre-configured exercises, sets, reps, and weights, streamlining the workout creation process. Users can customize these templates to match their personal goals, providing a quick and easy way to set up a workout without starting from scratch.
+<p></p>
+
+![template](https://github.com/user-attachments/assets/923fefa9-831d-4847-b469-9341c8dca514)
+
+
+### Workout List
+- The Workout List page allows users to view and manage their workouts in a sortable and filterable table format. Users can sort workouts by date, type, or duration, apply filters to find specific sessions, and stage workouts for future use, providing an organized and efficient way to interact with their workout history.
+<p></p>
+
+![table](https://github.com/user-attachments/assets/da48dfb6-05c0-4aa1-b4b0-a946d7975ad0)
+
 
 
 ### Data Visualization
-- The Data Visualization page provides an interactive overview of playlist data, featuring visualizations such as pie charts for genre breakdowns, graphs for release years, and detailed attribute displays. It helps users analyze their playlists by offering insights into music characteristics like Danceability, Energy, Popularity and more.
+- The Data Visualization page provides an interactive overview of workout data, featuring visualizations such as bar charts for tracking progress, graphs for weight lifted over time, and detailed breakdowns of workout attributes like sets, reps, and exercise type. It helps users analyze their performance by offering insights into trends and long-term strength development.
 <p></p>
 
-![p1](https://github.com/user-attachments/assets/a43987fb-3f72-43da-bce5-57c55c80f179)
 
-### Create
-- The Create page allows users to assemble staged tracks into new playlists directly on Spotify. It provides an intuitive interface for selecting and organizing songs, facilitating the creation of personalized playlists based on user preferences.
-<p></p>
+![progress](https://github.com/user-attachments/assets/650782c3-cc6e-4728-8417-d68673f8cb37)
 
-![create](https://github.com/user-attachments/assets/9c792f1b-d8cd-4005-a067-c5140724b82d)
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -168,10 +173,9 @@ To get a local copy up and running follow these steps.
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Change FetchAudioFeatures to fetch multiple songs at once
-- [ ] Make it so CreatePlaylist can create playlists bigger than 100 tracks
-- [ ] Make application follow Spotify's extension request guidelines
-- [ ] Change getAttributes in playlist service to only round values after the averages are computed.
+- [ ] implement CreateWorkout
+- [ ] Get CreateTemplate Working
+- [ ] Chart User Data
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -212,15 +216,7 @@ Reed Goldsworthy - Reedgoldsworthy2@gmail.com
 
 
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
 
-I would like to acknowledge these music organization services. They were a big inspiration, and are useful tools for organizing music.
-
-* https://www.chosic.com/spotify-playlist-analyzer/
-* http://organizeyourmusic.playlistmachinery.com/index.html
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
