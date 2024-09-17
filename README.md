@@ -231,6 +231,3 @@ I would like to acknowledge these music organization services. They were a big i
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/reed-goldsworthy-00893215a/
 
-
-#   l i f t i n g - t r a c k e r - b a c k e n d  
- 
